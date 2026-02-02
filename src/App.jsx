@@ -1,0 +1,43 @@
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
+import BillInput from "./components/exercise1/BillInput";
+import TipPercentageInput from "./components/exercise1/TipPercentageInput";
+import TotalDisplay from "./components/exercise1/TotalDisplay";
+import USDInput from "./components/exercise2/USDInput";
+import EURInput from "./components/exercise2/EURInput";
+import QuestionForm from "./components/exercise3/QuestionForm";
+
+function App() {
+  //Exercise 1 code
+
+  //Exercise 2 code
+
+  return (
+    <>
+      {/* Exercise 1. BillInput and TipPercentageInput manage their own state. TotalDisplay cannot update correctly. Fix the code so that it can.*/}
+      <div>
+        <h1>Tip Calculator</h1>
+        <BillInput />
+        <TipPercentageInput />
+        <TotalDisplay />
+      </div>
+
+      {/* Exercise 2. Typing in one input does not update the other, because state is duplicated in both children.  Make it so that one one input updates, so does the other */}
+      <div>
+        <h1>Currency Converter</h1>
+        <USDInput />
+        <EURInput />
+      </div>
+
+      {/* Exercise 3 Each OptionRadio tracks its own selection. SelectionDisplay cannot show the selected option. Clicking buttons does not update the display correctly.  Fix it so the selected option is displayed properly.  Write your code in the QuestionForm component */}
+      <div>
+        <h1>Quiz Question</h1>
+        <QuestionForm />
+      </div>
+    </>
+  );
+}
+
+export default App;
