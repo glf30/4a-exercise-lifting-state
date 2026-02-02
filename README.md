@@ -1,16 +1,29 @@
-# React + Vite
+# Lifting State — Refactoring Exercises
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo includes three small React apps. Each one runs, but the state is in the wrong place. As a result, parts of the UI fall out of sync. Your job is to refactor the components so the shared state lives in the right parent and all pieces of the UI update together.
 
-Currently, two official plugins are available:
+Starter code for all three exercises is provided.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 1. Tip Calculator  
+The user enters a bill amount and a tip percentage. A total should update as they type.  
+Right now, each component keeps its own state, so the total never reflects the inputs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Refactor so the inputs and the total stay connected.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. Currency Converter  
+There are two inputs, one for USD and one for EUR. Typing into either one should update the other.  
+Currently, each input stores its own value, so they drift apart immediately.
+
+Refactor so both values come from shared state and always stay in sync.
+
+---
+
+## 3. Quiz Form  
+A simple multiple-choice form with three radio buttons and a display showing the selected answer.  
+At the moment, each radio button tracks itself, so multiple options can appear “selected,” and the display never updates.
+
+Refactor so one source of truth controls the selection and the UI behaves like a real radio group.
