@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function BillInput() {
-  const [bill, setBill] = useState("");
+  const [bill, setBill] = useState(0);
 
   return (
     <div>
