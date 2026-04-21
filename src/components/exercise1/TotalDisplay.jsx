@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function TotalDisplay() {
+const TotalDisplay = () => {
   // Total is hardcoded / static; doesn’t know about BillInput or TipPercentageInput
 
   
@@ -10,3 +10,5 @@ export default function TotalDisplay() {
     </div>
   );
 }
+
+export TotalDisplay;
