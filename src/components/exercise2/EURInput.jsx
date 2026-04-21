@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function EURInput() {
+const EURInput = () => {
   const [eur, setEur] = useState(0);
 
   return (
@@ -14,3 +14,5 @@ export default function EURInput() {
     </div>
   );
 }
+
+export default EURInput;
