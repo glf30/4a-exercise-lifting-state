@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-export default function USDInput() {
+const USDInput = () => {
   const [usd, setUsd] = useState(0);
 
   return (
@@ -14,3 +14,5 @@ export default function USDInput() {
     </div>
   );
 }
+
+export default USDInput;
