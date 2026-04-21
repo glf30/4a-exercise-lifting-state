@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function TipPercentageInput() {
-  const [tip, setTip] = useState("");
+  const [tip, setTip] = useState(0);
 
   return (
     <div>
