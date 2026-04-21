@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function BillInput() {
+const BillInput = () => {
   const [bill, setBill] = useState(0);
 
   return (
@@ -14,3 +14,5 @@ export default function BillInput() {
     </div>
   );
 }
+
+export default BillInput;
